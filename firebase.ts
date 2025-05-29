@@ -1,4 +1,8 @@
-
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 import firebase from 'firebase/app'; // Changed: Use default import for v8 compatibility
 import 'firebase/firestore'; // Changed: Import for side effects to attach firestore to the firebase object
 
