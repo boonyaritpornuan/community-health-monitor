@@ -1,15 +1,12 @@
 
-import * as firebaseApp from 'firebase/app'; // Changed from named import
-import { getFirestore, serverTimestamp, Timestamp } from 'firebase/firestore';
-// import { getDatabase } from 'firebase/database'; // Uncomment if you plan to use Realtime Database
-// import { getAuth } from 'firebase/auth'; // Uncomment if you plan to use Firebase Authentication
-// import { getStorage } from 'firebase/storage'; // Uncomment if you plan to use Firebase Storage
+import firebase from 'firebase/app'; // Changed: Use default import for v8 compatibility
+import 'firebase/firestore'; // Changed: Import for side effects to attach firestore to the firebase object
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyC6ouVqTWZWFZhc3zABi-aUAAZS7KHeDvI",
   authDomain: "help-care-5a062.firebaseapp.com",
-  databaseURL: "https://help-care-5a062-default-rtdb.asia-southeast1.firebasedatabase.app", // Included as per user's provided config
+  databaseURL: "https://help-care-5a062-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "help-care-5a062",
   storageBucket: "help-care-5a062.firebasestorage.app", 
   messagingSenderId: "360912202854",
@@ -18,18 +15,13 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = firebaseApp.initializeApp(firebaseConfig); // Changed to use namespace
+const app = firebase.initializeApp(firebaseConfig); // Changed: Call initializeApp on the firebase object
 
 // Get Firestore instance
-const db = getFirestore(app);
+const db = firebase.firestore(); // Changed: Access firestore via the firebase object
 
-// Get Realtime Database instance (optional)
-// const rtdb = getDatabase(app); // Uncomment if needed
+// Export Timestamp and serverTimestamp in a way that matches existing usage from v8 style
+const Timestamp = firebase.firestore.Timestamp;
+const serverTimestamp = firebase.firestore.FieldValue.serverTimestamp; // This is the serverTimestamp function
 
-// Get Firebase Auth instance (optional)
-// const auth = getAuth(app); // Uncomment if needed
-
-// Get Firebase Storage instance (optional)
-// const storage = getStorage(app); // Uncomment if needed
-
-export { db, app, serverTimestamp, Timestamp }; // Add rtdb, auth, storage to exports if you use them
+export { db, app, serverTimestamp, Timestamp };
