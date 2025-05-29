@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Health Monitor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Additional global styles if necessary, but prefer Tailwind classes */
+      body {
+        font-family: 'Inter', sans-serif; /* A common Tailwind-friendly font */
+      }
+      /* Scrollbar styling for a more modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.1",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "recharts": "https://esm.sh/recharts@^2.15.3",
+    "firebase/app": "https://esm.sh/firebase@10.12.3/app",
+    "firebase/auth": "https://esm.sh/firebase@10.12.3/auth",
+    "firebase/firestore": "https://esm.sh/firebase@10.12.3/firestore",
+    "firebase/storage": "https://esm.sh/firebase@10.12.3/storage",
+    "express": "https://esm.sh/express@^5.1.0",
+    "cors": "https://esm.sh/cors@^2.8.5",
+    "firebase/": "https://esm.sh/firebase@^11.8.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>

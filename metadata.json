@@ -1,0 +1,5 @@
+{
+  "name": "Community Health Monitor",
+  "description": "A web application for monitoring patient vitals, managing alerts, users, and patients in a community health setting. Staff can view dashboards, manage patients and users, process alerts, and configure settings. Workers can record vital signs for patients.",
+  "requestFramePermissions": []
+}
