@@ -13,7 +13,7 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.1",
     "recharts": "^2.15.3",
-    "firebase/app": "10.12.3",
+    "firebase": "10.12.3",
     "firebase/auth": "10.12.3",
     "firebase/firestore": "10.12.3",
     "firebase/storage": "10.12.3",
